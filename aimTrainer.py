@@ -3,8 +3,8 @@ from pygame.locals import *
 import random
 pygame.init()
 
-randomNumber = random.randint(1,500)
-randomNumber2 = random.randint(1,500)
+randomNumber = random.randint(1,450)
+randomNumber2 = random.randint(1,450)
 x = 0
 squareCount = 0
 beenHere = 0
@@ -16,7 +16,7 @@ WHITE = (255, 255, 255)
 
 colour = RED
 
-size = (700, 500)
+size = (500, 500)
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption("AIM training | Score: 0")
 screen.fill(BLACK)
@@ -33,8 +33,8 @@ while done == False:
         done = True
     if event.type == USEREVENT + 1:
         screen.fill(BLACK)
-        randomNumber = random.randint(1,690)
-        randomNumber2 = random.randint(1,420)
+        randomNumber = random.randint(1,450)
+        randomNumber2 = random.randint(1,450)
         mySquare = pygame.draw.rect(screen,colour,(randomNumber,randomNumber2,55,55),5)
         squareCount = squareCount + 1
         if squareCount == 50:
